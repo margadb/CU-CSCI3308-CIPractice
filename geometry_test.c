@@ -170,7 +170,7 @@ START_TEST(test_2d_area_triangle)
     b.y = 3;
     c.x = 0;
     c.y = 0;
-    ck_assert(coord_2d_area_triangle(&a, &b, &c) == 3.0);
+    ck_assert(coord_2d_area_triangle(&a, &b, &c) == 0.0);
 
     a.x = 0;
     a.y = 0;
@@ -178,15 +178,15 @@ START_TEST(test_2d_area_triangle)
     b.y = 4;
     c.x = 0;
     c.y = 0;
-    ck_assert(coord_2d_area_triangle(&a, &b, &c) == 5.0);
+    ck_assert(coord_2d_area_triangle(&a, &b, &c) == 0.0);
 
     a.x = 1;
     a.y = 2;
     b.x = 4;
     b.y = 6;
     c.x = 0;
-    c.y = 0;
-    ck_assert(coord_2d_area_triangle(&a, &b, &c) == 5.0);
+    c.y = 2;
+    ck_assert(coord_2d_area_triangle(&a, &b, &c) == 2.0);
 
 }
 END_TEST
